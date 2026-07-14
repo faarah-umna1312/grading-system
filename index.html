@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Checker Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="portal-container">
+        <header class="portal-header">
+            <h1>Grade Checker Portal</h1>
+            <p>Enter your overall percentage score to generate your academic performance card.</p>
+        </header>
+
+        <div class="input-section">
+            <div class="input-wrapper">
+                <i class="fa-solid fa-percent percent-icon"></i>
+                <input type="number" id="percentage-input" min="0" max="100" placeholder="Enter your percentage (e.g., 92)" required>
+            </div>
+            <button id="check-btn" class="submit-btn">View Grade Card</button>
+        </div>
+
+        <div id="error-message" class="error-box"></div>
+
+        <div id="card-display-area" class="display-area"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
