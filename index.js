@@ -29,88 +29,61 @@ function generateGradeCard() {
     let minRange = 0;
     let maxRange = 100;
 
-    if (percentage >= 96 && percentage <= 100) {
-        gradeClass = 'app-grade';
-        gradeDisplay = 'A++';
-        badgeText = 'Outstanding';
-        titleText = 'Masterful Performance!';
-        statusText = '<i class="fa-solid fa-crown"></i> Perfect Score Tier';
-        gpaText = '5.0';
-        minRange = 96;
-        maxRange = 100;
-    } else if (percentage >= 91 && percentage <= 95) {
+    if (percentage >= 90 && percentage <= 100) {
         gradeClass = 'ap-grade';
         gradeDisplay = 'A+';
-        badgeText = 'Exceptional';
-        titleText = 'Exceptional Work!';
-        statusText = '<i class="fa-solid fa-star"></i> Elite Performance';
-        gpaText = '4.7';
-        minRange = 91;
-        maxRange = 95;
-    } else if (percentage >= 86 && percentage <= 90) {
+        badgeText = 'Outstanding';
+        titleText = 'Exceptional Performance!';
+        statusText = '<i class="fa-solid fa-crown"></i> Perfect Score Tier';
+        gpaText = '5.0';
+        minRange = 90;
+        maxRange = 100;
+    } else if (percentage >= 80 && percentage <= 89.9) {
         gradeClass = 'a-grade';
         gradeDisplay = 'A';
         badgeText = 'Excellent';
-        titleText = 'Brilliant Results!';
-        statusText = '<i class="fa-solid fa-medal"></i> Superior Standards';
-        gpaText = '4.0';
-        minRange = 86;
-        maxRange = 90;
-    } else if (percentage >= 81 && percentage <= 85) {
-        gradeClass = 'bpp-grade';
-        gradeDisplay = 'B++';
-        badgeText = 'Very Good';
-        titleText = 'Wonderful Progress!';
-        statusText = '<i class="fa-solid fa-thumbs-up"></i> Highly Commended';
-        gpaText = '3.7';
-        minRange = 81;
-        maxRange = 85;
-    } else if (percentage >= 76 && percentage <= 80) {
-        gradeClass = 'bp-grade';
-        gradeDisplay = 'B+';
-        badgeText = 'Good';
-        titleText = 'Great Effort!';
-        statusText = '<i class="fa-solid fa-check-double"></i> Strong Standing';
-        gpaText = '3.3';
-        minRange = 76;
-        maxRange = 80;
-    } else if (percentage >= 71 && percentage <= 75) {
+        titleText = 'Brilliant Results';
+        statusText = '<i class="fa-solid fa-star"></i> Elite Performance';
+        gpaText = '4.7';
+        minRange = 80;
+        maxRange = 89.9;
+    } else if (percentage >= 70 && percentage <= 79.9) {
         gradeClass = 'b-grade';
         gradeDisplay = 'B';
-        badgeText = 'Competent';
-        titleText = 'Solid Performance!';
-        statusText = '<i class="fa-solid fa-check"></i> Above Average';
-        gpaText = '3.0';
-        minRange = 71;
-        maxRange = 75;
-    } else if (percentage >= 61 && percentage <= 70) {
-        gradeClass = 'cpp-grade';
-        gradeDisplay = 'C++';
-        badgeText = 'Average';
-        titleText = 'Good Attempt!';
-        statusText = '<i class="fa-solid fa-arrow-up-right-dots"></i> Meeting Standards';
-        gpaText = '2.0';
-        minRange = 61;
-        maxRange = 70;
-    } else if (percentage >= 51 && percentage <= 60) {
+        badgeText = 'Very Good';
+        titleText = 'Wonderful Progress!';
+        statusText = '<i class="fa-solid fa-medal"></i> Commendable';
+        gpaText = '4.0';
+        minRange = 70;
+        maxRange = 79.9;
+    } else if (percentage >= 60 && percentage <= 69.9) {
         gradeClass = 'c-grade';
         gradeDisplay = 'C';
+        badgeText = 'Good';
+        titleText = 'Great Effort!';
+        statusText = '<i class="fa-solid fa-thumbs-up"></i> Good Standing';
+        gpaText = '3.7';
+        minRange = 60;
+        maxRange = 69.9;
+    } else if (percentage >= 40 && percentage <= 59.9) {
+        gradeClass = 'd-grade';
+        gradeDisplay = 'D';
         badgeText = 'Passing';
-        titleText = 'Grade Secured.';
-        statusText = '<i class="fa-solid fa-graduation-cap"></i> Credit Earned';
-        gpaText = '1.0';
-        minRange = 51;
-        maxRange = 60;
-    } else {
-        gradeClass = 'u-grade';
-        gradeDisplay = 'U';
-        badgeText = 'Ungraded';
+        titleText = 'Grade Secured!';
+        statusText = '<i class="fa-solid fa-check-double"></i> Credit Earned';
+        gpaText = '3.3';
+        minRange = 40;
+        maxRange = 59.9;
+    }  else if (percentage >= 0 && percentage <= 39.9) {
+        gradeClass = 'fail';
+        gradeDisplay = 'Fail';
+        badgeText = 'Failed';
         titleText = 'Action Required';
         statusText = '<i class="fa-solid fa-triangle-exclamation"></i> Needs Improvement';
-        gpaText = '0.0 ';
+        gpaText = '3.0';
         minRange = 0;
-        maxRange = 50;
-    }
+        maxRange = 39.9;
+    } 
 
     cardDisplayArea.innerHTML = `
         <div class="grade-card ${gradeClass}">
